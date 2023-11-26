@@ -1,0 +1,104 @@
+.header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 70px;
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+     padding-inline: 100px;
+     position: sticky;
+     top: 0;
+     background-color: #ffff;
+     z-index: 9999;
+}
+
+.header_left {
+     color: rgb(0, 149, 255);
+}
+
+.header_right ul {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 15px;
+     list-style: none;
+     text-decoration: none !important;
+}
+
+.header_right ul li {
+     font-size: 16px;
+     color: black;
+     width: 60px;
+     text-align: center;
+}
+
+.header_right ul li:hover {
+     cursor: pointer;
+     color: rgb(0, 149, 255);
+     transition: 0.1s;
+}
+
+.active {
+     border-bottom: 2px solid rgb(0, 149, 255);
+     border-radius: 6px;
+     padding-bottom: 2px;
+}
+
+
+.header_right {
+     display: flex;
+     align-items: center;
+   }
+   
+   .menu-icon {
+     display: none; 
+     cursor: pointer;
+     padding: 10px;
+   }
+   
+   .bar {
+     width: 25px;
+     height: 3px;
+     background-color: #333;
+     margin: 6px 0;
+     transition: 0.4s;
+   }
+   
+   /* Media query for widths less than 800px */
+   @media screen and (max-width: 800px) {
+     .header{
+          padding-inline: 20px;
+     }
+     .header_right ul {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          width: 100%;
+          background-color: #fff;
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+      
+        .header_right ul.open {
+          display: flex;
+        }
+      
+        .header_right ul li {
+          width: 100px;
+          text-align: center;
+          padding-bottom: 2px;
+        }
+      
+        .menu-icon {
+          display: block;
+          /* transform:rotate(45deg) ; */
+        }
+      
+        .header.open {
+          height: 70px;
+        }
+      
+        .header.open .header_right ul {
+          display: flex;
+        }
+   }
